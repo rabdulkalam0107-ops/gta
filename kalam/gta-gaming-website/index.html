@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GTA Gaming World - Demo Fan Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icons/logo.svg">
+</head>
+<body>
+  <div id="loading" class="loading-screen">
+    <div class="loader"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="GTA Gaming World">
+        <img src="assets/icons/logo.svg" alt="GTA Logo">
+        <span>GTA Gaming World</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#home" data-target="home">Home</a></li>
+          <li><a href="#games" data-target="games">GTA Games</a></li>
+          <li><a href="#videos" data-target="videos">Videos</a></li>
+          <li><a href="#tips" data-target="tips">Gaming Tips</a></li>
+          <li><a href="cart.html" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search" id="search-wrap">
+          <input id="search-input" placeholder="Search games...">
+          <button id="search-btn" aria-label="Search">🔍</button>
+        </div>
+        <button id="hamburger" class="hamburger" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <canvas id="particle-canvas" class="particles"></canvas>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title">WELCOME TO THE GTA GAMING WORLD</h1>
+        <p class="hero-sub">Explore GTA games, watch gameplay, discover tips and build your collection.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" id="explore-games">Explore GTA Games</a>
+          <a class="btn btn-ghost" id="watch-videos">Watch Videos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="section games-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>GTA Games</h2>
+          <div class="controls">
+            <select id="platform-filter"><option value="all">All Platforms</option><option>PC</option><option>PlayStation</option><option>Xbox</option></select>
+          </div>
+        </div>
+        <div id="games-grid" class="games-grid"></div>
+      </div>
+    </section>
+
+    <section id="videos" class="section videos-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>GTA Videos</h2>
+          <div class="controls">
+            <select id="video-filter"><option value="all">All Categories</option><option>GTA V Gameplay</option><option>GTA Online</option><option>San Andreas</option></select>
+          </div>
+        </div>
+        <div id="videos-grid" class="videos-grid"></div>
+      </div>
+    </section>
+
+    <section id="tips" class="section tips-section">
+      <div class="container">
+        <div class="section-header"><h2>Gaming Tips</h2></div>
+        <div id="tips-grid" class="tips-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="game-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="game-modal-close">✕</button>
+      <div id="game-modal-body"></div>
+    </div>
+  </div>
+
+  <div id="video-modal" class="modal">
+    <div class="modal-content video-modal-content">
+      <button class="modal-close" id="video-modal-close">✕</button>
+      <div class="video-wrap" id="video-modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <img src="assets/icons/logo.svg" alt="logo">
+        <p>Fan-made demo portal for GTA-inspired content.</p>
+      </div>
+      <div class="links">
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#tips">Tips</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <div class="socials">🔗 🔗 🔗</div>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer">GTA and Rockstar Games are trademarks of their respective owners. This is a fan-made/demo website.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/games.js"></script>
+  <script src="js/videos.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
